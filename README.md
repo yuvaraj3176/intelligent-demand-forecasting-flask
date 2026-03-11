@@ -250,23 +250,40 @@ text
 5. **Replace** `YOUR_USERNAME` with your actual GitHub username
 6. **Commit and push**:
 
-
--> Screenshorts   
-<img width="1920" height="1080" alt="Screenshot 2026-03-12 021821" src="https://github.com/user-attachments/assets/a6e915d9-9497-4220-9045-8a78db016f73" />
-<img width="1920" height="1080" alt="Screenshot 2026-03-12 021821" src="https://github.com/user-attachments/assets/a6e915d9-9497-4220-9045-8a78db016f73" />
-<img width="766" height="842" alt="Screenshot 2026-03-12 021905" src="https://github.com/user-attachments/assets/16471ded-ebb1-436b-94fe-e8f8ec513b11" />
-<img width="766" height="842" alt="Screenshot 2026-03-12 021905" src="https://github.com/user-attachments/assets/16471ded-ebb1-436b-94fe-e8f8ec513b11" />
-<img width="704" height="833" alt="Screenshot 2026-03-12 021930" src="https://github.com/user-attachments/assets/a33332a9-a1b8-42fd-a289-2794ede96883" />
-<img width="704" height="833" alt="Screenshot 2026-03-12 021930" src="https://github.com/user-attachments/assets/a33332a9-a1b8-42fd-a289-2794ede96883" />
-<img width="1096" height="841" alt="Screenshot 2026-03-12 022100" src="https://github.com/user-attachments/assets/9103890b-ec93-463c-ac6d-3076d1f94e1d" />
-<img width="1096" height="841" alt="Screenshot 2026-03-12 022100" src="https://github.com/user-attachments/assets/9103890b-ec93-463c-ac6d-3076d1f94e1d" />
-<img width="1920" height="1080" alt="Screenshot 2026-03-12 020117" src="https://github.com/user-attachments/assets/a00aaf89-952a-431c-a77c-4117a56322c4" />
-<img width="1920" height="1080" alt="Screenshot 2026-03-12 020117" src="https://github.com/user-attachments/assets/a00aaf89-952a-431c-a77c-4117a56322c4" />
-<img width="1920" height="1080" alt="Screenshot 2026-03-12 021523" src="https://github.com/user-attachments/assets/4a98f0e5-4ea3-478a-931c-6778160b4195" />
-<img width="1920" height="1080" alt="Screenshot 2026-03-12 021523" src="https://github.com/user-attachments/assets/4a98f0e5-4ea3-478a-931c-6778160b4195" />
-<img width="1920" height="1080" alt="Screenshot 2026-03-12 021547" src="https://github.com/user-attachments/assets/01d1f4dd-ddfc-4487-bbf5-e32fdb2c9b86" />
-<img width="1920" height="1080" alt="Screenshot 2026-03-12 021547" src="https://github.com/user-attachments/assets/01d1f4dd-ddfc-4487-bbf5-e32fdb2c9b86" />
 bash
    git add README.md
    git commit -m "Add README documentation"
    git push origin main
+
+
+-> Screenshorts   
+
+<img width="1920" height="1080" alt="Screenshot 2026-03-12 021523" src="https://github.com/user-attachments/assets/4a98f0e5-4ea3-478a-931c-6778160b4195" />
+
+
+<img width="1920" height="1080" alt="Screenshot 2026-03-12 021547" src="https://github.com/user-attachments/assets/01d1f4dd-ddfc-4487-bbf5-e32fdb2c9b86" />
+
+
+<img width="1920" height="1080" alt="Screenshot 2026-03-12 020117" src="https://github.com/user-attachments/assets/a00aaf89-952a-431c-a77c-4117a56322c4" />
+
+
+<img width="1096" height="841" alt="Screenshot 2026-03-12 022100" src="https://github.com/user-attachments/assets/9103890b-ec93-463c-ac6d-3076d1f94e1d" />
+
+
+<img width="704" height="833" alt="Screenshot 2026-03-12 021930" src="https://github.com/user-attachments/assets/a33332a9-a1b8-42fd-a289-2794ede96883" />
+
+
+<img width="766" height="842" alt="Screenshot 2026-03-12 021905" src="https://github.com/user-attachments/assets/16471ded-ebb1-436b-94fe-e8f8ec513b11" />
+
+
+<img width="1920" height="1080" alt="Screenshot 2026-03-12 021821" src="https://github.com/user-attachments/assets/a6e915d9-9497-4220-9045-8a78db016f73" />
+
+
+
+
+
+
+
+
+
+
