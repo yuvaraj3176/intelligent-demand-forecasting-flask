@@ -1,14 +1,103 @@
 {% extends "base.html" %}
 
-{% block title %}Charts{% endblock %}
+{% block title %}Sales Charts{% endblock %}
 
 {% block content %}
-<div class="text-center py-5">
-    <h2>📈 Sales Analytics Charts</h2>
-    <div class="alert alert-info mt-4">
-        <h4>🚧 Under Construction</h4>
-        <p>The visualization module is being developed by Member 2.</p>
-        <p>Check back soon for interactive charts!</p>
+<h2 class="mb-4">📈 Sales Analytics Charts</h2>
+
+<!-- Sales Trend Chart -->
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Sales Trend with Moving Average</h5>
+            </div>
+            <div class="card-body text-center">
+                {% if session.get('charts_generated') %}
+                    <img src="{{ url_for('static', filename='images/trend.png') }}?{{ range(1, 1000) | random }}" 
+                         class="img-fluid rounded" alt="Sales Trend">
+                {% else %}
+                    <div class="alert alert-info">
+                        <p>Generating charts from your sales data...</p>
+                    </div>
+                    <img src="{{ url_for('static', filename='images/trend.png') }}?{{ range(1, 1000) | random }}" 
+                         class="img-fluid rounded" alt="Sales Trend">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Category Distribution -->
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card shadow h-100">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">Category Distribution</h5>
+            </div>
+            <div class="card-body text-center">
+                <img src="{{ url_for('static', filename='images/category.png') }}?{{ range(1, 1000) | random }}" 
+                     class="img-fluid rounded" alt="Category Distribution">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Top Products -->
+    <div class="col-md-6">
+        <div class="card shadow h-100">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">Top Products</h5>
+            </div>
+            <div class="card-body text-center">
+                <img src="{{ url_for('static', filename='images/top_products.png') }}?{{ range(1, 1000) | random }}" 
+                     class="img-fluid rounded" alt="Top Products">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Monthly Trend -->
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card shadow">
+            <div class="card-header bg-warning">
+                <h5 class="mb-0">Monthly Sales Trend</h5>
+            </div>
+            <div class="card-body text-center">
+                <img src="{{ url_for('static', filename='images/monthly.png') }}?{{ range(1, 1000) | random }}" 
+                     class="img-fluid rounded" alt="Monthly Trend">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chart Controls -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow">
+            <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0">Chart Controls</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="mb-2">Charts are automatically generated from your sales data.</p>
+                        <p class="text-muted small">
+                            <i class="bi bi-info-circle"></i> 
+                            Refresh this page to update charts with latest data.
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <a href="{{ url_for('add_sale') }}" class="btn btn-primary">
+                            ➕ Add More Data
+                        </a>
+                        <a href="{{ url_for('forecast') }}" class="btn btn-success">
+                            🔮 Generate Forecast
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
