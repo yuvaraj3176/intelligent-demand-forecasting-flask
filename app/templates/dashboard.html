@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center">
+    <h2>📊 Dashboard</h2>
+    <span class="badge bg-primary p-3">
+        Welcome, <strong>{{ name }}</strong>!
+    </span>
+</div>
+
+<!-- Statistics Cards -->
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="card-title">Total Sales</h6>
+                        <h2 class="display-6">{{ total_sales }}</h2>
+                    </div>
+                    <i class="bi bi-cart-check" style="font-size: 3rem;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="card-title">Total Revenue</h6>
+                        <h2 class="display-6">${{ total_revenue }}</h2>
+                    </div>
+                    <i class="bi bi-currency-dollar" style="font-size: 3rem;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="card-title">Unique Products</h6>
+                        <h2 class="display-6">{{ unique_products }}</h2>
+                    </div>
+                    <i class="bi bi-box" style="font-size: 3rem;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quick Actions -->
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">⚡ Quick Actions</h5>
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <a href="{{ url_for('add_sale') }}" class="btn btn-primary btn-lg">
+                        ➕ Add New Sale
+                    </a>
+                    <a href="{{ url_for('sales') }}" class="btn btn-info btn-lg">
+                        📋 View All Sales
+                    </a>
+                    <a href="{{ url_for('forecast') }}" class="btn btn-warning btn-lg">
+                        🔮 Generate Forecast
+                    </a>
+                    <a href="{{ url_for('charts') }}" class="btn btn-success btn-lg">
+                        📈 View Charts
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">ℹ️ System Information</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-borderless">
+                    <tr>
+                        <td><strong>User:</strong></td>
+                        <td>{{ name }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data Storage:</strong></td>
+                        <td>CSV Files</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Forecasting Model:</strong></td>
+                        <td>Holt-Winters (Statsmodels)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Python Version:</strong></td>
+                        <td>3.11</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Framework:</strong></td>
+                        <td>Flask</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card shadow mt-3">
+            <div class="card-header bg-warning">
+                <h5 class="mb-0">💡 Tip</h5>
+            </div>
+            <div class="card-body">
+                <p class="mb-0">
+                    Add at least 7-10 sales records to generate accurate forecasts. 
+                    The more data you have, the better the predictions!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

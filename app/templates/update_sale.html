@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Update Sale{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header bg-warning">
+                <h4 class="mb-0">✏️ Update Sale #{{ sale.sale_id }}</h4>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <strong>Current Values:</strong> Leave fields empty to keep current values.
+                </div>
+                
+                <form method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="product_name" class="form-label">Product Name</label>
+                            <input type="text" class="form-control" id="product_name" name="product_name" 
+                                   placeholder="Current: {{ sale.product_name }}">
+                            <small class="text-muted">Current: {{ sale.product_name }}</small>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="date" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="date" name="date" 
+                                   placeholder="Current: {{ sale.date }}">
+                            <small class="text-muted">Current: {{ sale.date }}</small>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="quantity" class="form-label">Sales Quantity</label>
+                            <input type="number" class="form-control" id="quantity" name="quantity" 
+                                   min="1" placeholder="Current: {{ sale.sales_quantity }}">
+                            <small class="text-muted">Current: {{ sale.sales_quantity }}</small>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="category" class="form-label">Category</label>
+                            <select class="form-control" id="category" name="category">
+                                <option value="">Select Category (Current: {{ sale.category }})</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Clothing">Clothing</option>
+                                <option value="Food">Food & Beverages</option>
+                                <option value="Books">Books</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <small class="text-muted">Current: {{ sale.category }}</small>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="price" class="form-label">Price ($)</label>
+                            <input type="number" step="0.01" class="form-control" id="price" name="price" 
+                                   min="0" placeholder="Current: {{ sale.price }}">
+                            <small class="text-muted">Current: ${{ "%.2f"|format(sale.price|float) }}</small>
+                        </div>
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-warning btn-lg">Update Sale</button>
+                        <a href="{{ url_for('sales') }}" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
